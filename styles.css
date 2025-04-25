@@ -1,0 +1,190 @@
+/* Navbar container */
+nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Nav links */
+  nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover & active link effect */
+  nav a:hover,
+  nav a.active {
+    color: #007BFF;
+  }
+  
+  /* Underline animation */
+  nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #007BFF;
+    transition: width 0.3s;
+  }
+  
+  nav a:hover::after,
+  nav a.active::after {
+    width: 100%;
+  }
+  :root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+  }
+  
+  .dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+  }
+  :root {
+    --bg-color: #0e0e0e;
+    --text-color: #f0f0f0;
+    --accent-color: #00c2ff;
+    --card-bg: #1a1a1a;
+    --border-radius: 1rem;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    --transition: 0.3s ease-in-out;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: var(--transition);
+  }
+  
+  /* Links */
+  a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+  a:hover {
+    color: #fff;
+  }
+  
+  /* Utility Classes */
+  .card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin: 1rem;
+    transition: var(--transition);
+  }
+  /* Global styles - styles.css or styles.scss */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1f1f1f;
+  --card-bg: #f0f0f0;
+  --primary: #007acc;
+  --border-color: #e0e0e0;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --primary: #0a84ff;
+  --border-color: #333333;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin: 1rem 0;
+}
+
+button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color:#005fa3;
+}
+:root {
+  --primary: #00bfff;
+  --text-light: #f1f1f1;
+  --bg-dark: #121212;
+  --bg-darker: #1e1e1e;
+  --card-dark: #242424;
+  --border-dark: #333;
+}
+
+body.dark-mode {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.app-header {
+  background-color: var(--bg-darker);
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.nav-links a {
+  color: var(--text-light);
+  background-color: var(--card-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background-color: var(--primary);
+  color: black;
+}
+
+.theme-toggle {
+  background-color: var(--primary);
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600
+}
+
+
+  

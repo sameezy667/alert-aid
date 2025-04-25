@@ -1,0 +1,22 @@
+<header class="app-header">
+  <h1>🌐 Alert Aid</h1>
+  <nav class="nav-links">
+    <a routerLink="/landing" routerLinkActive="active">Home</a>
+
+    <a routerLink="/features" routerLinkActive="active">Features</a>
+    <a routerLink="/prediction" routerLinkActive="active">Prediction</a>
+    <a routerLink="/implementation" routerLinkActive="active">Implementation</a>
+    <a routerLink="/about" routerLinkActive="active">About Us</a>
+  </nav>
+  <button class="theme-toggle" (click)="toggleDarkMode()">
+    {{ darkMode ? '☀ Light Mode' : '🌙 Dark Mode' }}
+  </button>
+</header>
+
+<main class="app-main">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  <p>Made with ❤️ by Team Alert Aid</p>
+</footer>

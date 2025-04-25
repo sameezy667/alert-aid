@@ -1,0 +1,245 @@
+/* Variables */
+:root {
+  --text-color-light: #111;
+  --text-color-dark: #f0f0f0;
+  --bg-color-light: #f4f4f4;
+  --bg-color-dark: #121212;
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1e1e1e;
+  --border-color-light: #ccc;
+  --border-color-dark: #444;
+  --primary-light: #007bff;
+  --primary-dark: #0a84ff;
+}
+
+/* Reset and base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode override */
+body.dark-mode {
+  background-color: var(--bg-color-dark);
+  color: var(--text-color-dark);
+}
+
+/* Header & Footer */
+header,
+footer {
+  background-color: var(--card-bg-light);
+  color: var(--text-color-light);
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: var(--card-bg-dark);
+  color: var(--text-color-dark);
+}
+
+/* Nav */
+nav {
+  background: #eee;
+  padding: 10px;
+}
+
+body.dark-mode nav {
+  background: #1f1f1f;
+}
+
+nav a {
+  margin: 0 1rem;
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  background-color: #eaeaea;
+  color: #333;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background-color: #d0d0d0;
+}
+
+body.dark-mode nav a {
+  background-color: #2a2a2a;
+  color: var(--text-color-dark);
+}
+
+body.dark-mode nav a:hover {
+  background-color: #3a3a3a;
+}
+
+/* Buttons */
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  background-color: var(--primary-light);
+  color: white;
+}
+
+body.dark-mode button {
+  background-color: var(--primary-dark);
+  color: white;
+}
+
+/* Header wrapper */
+.app-header {
+  background-color: var(--card-bg-light);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .app-header {
+  background-color: var(--card-bg-dark);
+  border-bottom: 1px solid var(--border-color-dark);
+}
+
+.app-header h1 {
+  margin: 0;
+  color: var(--primary-light);
+}
+
+body.dark-mode .app-header h1 {
+  color: var(--primary-dark);
+}
+
+/* Main content card */
+main {
+  background: var(--card-bg-light);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode main {
+  background: var(--card-bg-dark);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Landing section */
+.landing-container {
+  padding: 2rem;
+  text-align: center;
+  color: inherit;
+  background-color: inherit;
+  min-height: 100vh;
+}
+
+/* Intro section */
+.intro-section {
+  margin-top: 2rem;
+  padding: 1rem;
+  color: inherit;
+}
+
+.intro-section h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.intro-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Implementation section */
+.implementation {
+  margin: 3rem auto 2rem;
+  max-width: 600px;
+  border-top: 1px solid var(--border-color-light);
+  padding-top: 1.5rem;
+  color: inherit;
+}
+
+body.dark-mode .implementation {
+  border-top: 1px solid var(--border-color-dark);
+}
+
+.implementation h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.implementation .subtext {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+/* Footer nav buttons */
+.footer-nav {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  background-color: var(--card-bg-light);
+  padding: 0.5rem;
+  border-radius: 12px;
+  flex-wrap: wrap;
+}
+
+body.dark-mode .footer-nav {
+  background-color: var(--card-bg-dark);
+}
+
+.footer-nav button {
+  flex: 1;
+  min-width: 140px;
+  padding: 1rem;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-right: 1px solid var(--border-color-light);
+}
+
+body.dark-mode .footer-nav button {
+  border-right: 1px solid var(--border-color-dark);
+}
+
+.footer-nav button:last-child {
+  border-right: none;
+}
+
+.footer-nav button:hover {
+  background-color: var(--primary-light);
+  color: #fff;
+}
+
+body.dark-mode .footer-nav button:hover {
+  background-color: var(--primary-dark);
+}
+.app-footer {
+  background-color: var(--card-bg-light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body.dark-mode .app-footer {
+  background-color: var(--card-bg-dark);
+  border-top: 1px solid var(--border-color-dark);
+}
+
